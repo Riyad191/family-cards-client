@@ -1,0 +1,47 @@
+.memory--card {
+  background-color: rgb(0, 47, 109);
+  height: 600px;
+  width: 350px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(255, 221, 72);
+}
+.memory--card__img {
+  height: 50%;
+  width: 100%;
+}
+
+.memory--card__delete {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: red;
+  width: 80px;
+  padding: 1px 5px 2px 0;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.memory--card__text {
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 20px;
+  height: 50%;
+  width: 100%;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+}
+.memory--card__contect {
+  font-size: 25px;
+  color: rgb(255, 80, 80);
+}
+#memory--card__message {
+  font-size: 14px;
+}

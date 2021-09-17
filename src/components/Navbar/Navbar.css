@@ -1,0 +1,109 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue-background-color);
+  border-radius: 30px;
+  padding: 0 20px;
+  width: 100%;
+  border: var(--navbar-border-color) solid 5px;
+  margin-bottom: 80px;
+}
+.title {
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: var(--navbar-text-color);
+}
+.show__cards {
+  text-decoration: none;
+  color: var(--navbar-text-color);
+  padding: 10px 20px;
+  background-color: rgb(113, 0, 128);
+  margin-right: 20px;
+  border-radius: 16px;
+  border: solid var(--navbar-border-color) 3px;
+}
+img {
+  border-radius: 20px;
+}
+.navbar__image {
+  height: 100px;
+}
+.navbar__right--side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 400px;
+}
+.logout__btn {
+  height: 40px;
+  width: 90px;
+  background-color: var(--background-color);
+  color: var(--red-color);
+  cursor: pointer;
+  font-size: 22;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.logout__parent {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  width: 600px;
+}
+.signin__btn {
+  background-color: var(--background-color);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  font-size: 20px;
+}
+.signin__btn a {
+  color: var(--red-color);
+  text-decoration: none;
+}
+.navbar__left--side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background-color);
+  font-size: 24px;
+}
+.letter {
+  font-family: serif;
+  color: var(--background-color);
+  font-size: 27px;
+  background-color: var(--users-first-letter);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1400px) {
+  .navbar {
+    flex-direction: column;
+    padding: 40px 0;
+    width: 500px;
+  }
+  .navbar__left--side {
+    flex-direction: column-reverse;
+  }
+  img {
+    margin-bottom: 40px;
+  }
+}

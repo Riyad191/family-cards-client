@@ -1,0 +1,34 @@
+.home__page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-right: 50px;
+  margin-top: 30px;
+  width: 100%;
+}
+.memories__parent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 1200px) {
+  .home__page {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .memories__parent {
+    justify-content: center;
+
+    margin-top: 40px;
+    flex-direction: column;
+    width: 350px;
+    padding-right: 350px;
+  }
+}
+@media (max-width: 1420px) and (min-width: 980px) {
+}
+
+@media (max-width: 400) and (min-width: 100) {
+}
