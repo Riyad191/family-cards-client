@@ -26,10 +26,6 @@ const SignUp = (props) => {
 
   const [errorMsg, setErrMsg] = useState("");
 
-  useEffect(() => {
-    setErrMsg(props.errorMsg);
-  }, [props.errorMsg]);
-
   const switchMode = () => {
     console.log("switch sign method +++");
     setForm(initialState);
@@ -37,13 +33,30 @@ const SignUp = (props) => {
     setErrMsg("");
     setShowPassword(false);
   };
+  // useEffect(() => {
+  //   setErrMsg(props.errorMsg);
+  // }, [props.errorMsg]);
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (isSignup) {
+  //     dispatch(signup(form, history));
+  //   } else {
+  //     dispatch(signin(form, history));
+  //   }
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isSignup) {
-      dispatch(signup(form, history));
+      dispatch(signup(form, history)).then((res) => {
+        console.log(res);
+        setErrMsg(res);
+      });
     } else {
-      dispatch(signin(form, history));
+      dispatch(signin(form, history)).then((res) => {
+        console.log(res);
+        setErrMsg(res);
+      });
     }
   };
   // ===========================================================
@@ -122,9 +135,10 @@ const SignUp = (props) => {
     </section>
   );
 };
-const mapStateToProps = (state) => {
-  return {
-    errorMsg: state.auth.errMsg,
-  };
-};
-export default HOC(connect(mapStateToProps, {})(SignUp));
+// const mapStateToProps = (state) => {
+//   return {
+//     errorMsg: state.auth.errMsg,
+//   };
+// };
+// export default HOC(connect(mapStateToProps, {})(SignUp));
+export default HOC(SignUp);

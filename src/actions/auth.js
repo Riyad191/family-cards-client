@@ -8,8 +8,8 @@ export const signin = (formData, router) => async (dispatch) => {
     router.push("/");
   } catch (error) {
     console.log(error.response.data.message);
-    // return error.response.data.message;
-    dispatch({ type: ERROR, data: { errMsg: error.response.data.message } });
+    return error.response.data.message;
+    // dispatch({ type: ERROR, data: { errMsg: error.response.data.message } });
   }
 };
 
@@ -20,7 +20,7 @@ export const signup = (formData, router) => async (dispatch) => {
     router.push("/");
   } catch (error) {
     console.log(error.response.data.message);
-    // return error.response.data.message;
-    dispatch({ type: ERROR, data: { errMsg: error.response.data.message } });
+    return error.response.data.message;
+    // dispatch({ type: ERROR, data: { errMsg: error.response.data.message } });
   }
 };
